@@ -12,7 +12,7 @@ public class Camion extends Vehiculo{
 		cantidadCamiones++;
 	}
 	
-	public Camion(String placa, String nombre, long precio, long peso, Fabricante fabricante, int ejes) {
+	public Camion(String placa, String nombre, int precio, float peso, Fabricante fabricante, int ejes) {
 		super(placa, 2, 80,  nombre, precio, peso, "4X2", fabricante);
 		this.ejes = ejes;
 		cantidadCamiones++;
@@ -42,8 +42,8 @@ public class Camion extends Vehiculo{
 
 	
 	// Metodos
-	public static int cantidadCamiones() {
-		return getCantidadCamiones();
-	}
+	//public static int cantidadCamiones() {
+		//return getCantidadCamiones();
+	//}
 
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Fabricante {
 	private String nombre;
 	private Pais pais;
-	private int vehiculosFabricados = 0;
+	private int contador;
 	private static ArrayList<Fabricante> lista = new ArrayList<Fabricante>(); 
 	
 	// constructores
@@ -13,6 +13,7 @@ public class Fabricante {
 	public Fabricante(String nombre, Pais pais) {
 		this.nombre = nombre;
 		this.pais = pais;
+		contador=0;
 		lista.add(this);
 	}
 	
@@ -38,10 +39,13 @@ public class Fabricante {
 		this.pais = pais;
 	}
 
-	public void fabricarVehiculo() {
-		this.vehiculosFabricados++;
+	public void SetContador() {
+		this.contador++;
 	}
 
+	public int getContador() {
+		return contador;
+	}
 	public static ArrayList<Fabricante> getLista() {
 		return lista;
 	}
@@ -53,14 +57,10 @@ public class Fabricante {
 	
 	// Metodos maximo fabricante
 	
-	public int getVehiculosFabricados() {
-		return this.vehiculosFabricados;
-	}
-	
 	public static Fabricante fabricaMayorVentas() {
-		Fabricante ganador = new Fabricante();
+		Fabricante ganador = lista.get(0);
 		for(int i = 0; i < lista.size(); i++) {
-			if(lista.get(i).getVehiculosFabricados() > ganador.getVehiculosFabricados()) {
+			if(lista.get(i).getContador() > ganador.getContador()) {
 				ganador = lista.get(i);
 			}
 		}

@@ -38,14 +38,8 @@ public class Automovil extends Vehiculo{
 	
 	// metodos
 	
-	public static int cantidadAutomoviles() {
-		return getCantidadAutomoviles();
-	}
-	
-	
-	
-	
-	 
+	//public static int cantidadAutomoviles() {
+		//return getCantidadAutomoviles();
 	
 	
 }
